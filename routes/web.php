@@ -6,21 +6,20 @@ Route::get('/', function () {
     return view('home'); // ini mengarah ke resources/views/home.blade.php
 });
 
-// kalau mau sekalian route ke menu navbar
-Route::get('/tentang', function () {
-    return view('tentang'); 
+Route::get('/about', function () {
+    return view('about'); 
 });
 
-Route::get('/cari-dokter', function () {
-    return view('cari-dokter'); 
+Route::get('/caridokter', function () {
+    return view('caridokter'); 
 });
 
 Route::get('/konsultasi', function () {
     return view('konsultasi'); 
 });
 
-Route::get('/kontak', function () {
-    return view('kontak'); 
+Route::get('/contact', function () {
+    return view('contact'); 
 });
 
 Route::get('/login', function () {
