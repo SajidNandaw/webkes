@@ -16,9 +16,9 @@
                 <span class="text-lg font-bold text-teal-600">RUMAH SAKIT<br>TIRTA NEGARA</span>
             </div>
             <nav class="space-x-6 text-gray-700 font-medium">
-                <a href="/" class="hover:text-teal-600">Beranda</a>
+                <a href="/home" class="hover:text-teal-600">Beranda</a>
                 <a href="/about" class="hover:text-teal-600">Tentang</a>
-                <a href="/caridokter" class="hover:text-teal-600">Cari Dokter</a>
+                <a href="/dokter" class="hover:text-teal-600">Cari Dokter</a>
                 <a href="/konsultasi" class="hover:text-teal-600">Konsultasi</a>
                 <a href="/contact" class="hover:text-teal-600">Kontak</a>
                 <button class="ml-4">

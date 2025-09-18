@@ -74,7 +74,7 @@
             <!-- Form -->
             <section class="w-[440px] max-w-full flex flex-col items-center">
                 <h1 class="text-3xl font-bold mb-6">Buat Akun</h1>
-                <form action="#" method="POST" class="w-full space-y-5">
+                <form action="{{ route('register.post') }}" method="POST" class="w-full space-y-5">
                     @csrf
                     <!-- Nama -->
                     <div
@@ -120,8 +120,19 @@
                         </button>
                     </div>
                 </form>
+
+                <!-- Tambahan link ke login -->
+                <div class="w-full flex justify-center mt-6">
+                    <p class="text-sm text-gray-600">
+                        Sudah punya akun?
+                        <a href="/login" class="text-teal-600 font-semibold hover:underline">
+                            Masuk di sini
+                        </a>
+                    </p>
+                </div>
             </section>
         </main>
     </div>
 </body>
+
 </html>

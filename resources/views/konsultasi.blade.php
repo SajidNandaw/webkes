@@ -60,8 +60,7 @@
             </div>
             <div class="absolute bottom-[120px] -right-[235px] w-[290px] h-[290px] bg-teal-300/40 rounded-full">
             </div>
-            <div
-                class="absolute -top-6 right-6 w-[80px] h-[80px] bg-teal-200 rounded-[12px] rotate-[12deg] opacity-90">
+            <div class="absolute -top-6 right-6 w-[80px] h-[80px] bg-teal-200 rounded-[12px] rotate-[12deg] opacity-90">
             </div>
             <div
                 class="absolute bottom-10 left-16 w-[64px] h-[64px] bg-gradient-to-br from-teal-200 to-white rounded-[12px] rotate-[12deg] opacity-90">
@@ -70,35 +69,60 @@
             <!-- Form Konsultasi -->
             <section class="w-[440px] max-w-full flex flex-col items-center">
                 <h1 class="text-2xl font-bold mb-8">PELAYANAN KONSULTASI</h1>
-                <form action="#" method="POST" class="w-full space-y-5">
+
+                <!-- Alert sukses -->
+                @if (session('success'))
+                    <div class="w-full mb-4 p-3 rounded-md bg-green-200 text-green-800 text-center shadow">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                <!-- Alert error validasi -->
+                @if ($errors->any())
+                    <div class="w-full mb-4 p-3 rounded-md bg-red-200 text-red-800 shadow">
+                        <ul class="list-disc list-inside text-left">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+
+                <form action="{{ route('konsultasi.post') }}" method="POST" class="w-full space-y-5">
+                    @csrf
                     <!-- Nama Lengkap -->
-                    <input type="text" placeholder="Nama Lengkap"
+                    <input type="text" name="nama" placeholder="Nama Lengkap"
                         class="w-full px-4 py-3 rounded-md bg-gradient-to-r from-teal-100 to-teal-50 placeholder-gray-500 outline-none shadow-sm" />
 
                     <!-- Keluhan -->
-                    <input type="text" placeholder="Keluhan"
+                    <input type="text" name="keluhan" placeholder="Keluhan"
                         class="w-full px-4 py-3 rounded-md bg-gradient-to-r from-teal-100 to-teal-50 placeholder-gray-500 outline-none shadow-sm" />
 
                     <!-- Pilih Poli -->
-                    <select
+                    <select name="poli"
                         class="w-full px-4 py-3 rounded-md bg-gradient-to-r from-teal-100 to-teal-50 text-gray-700 outline-none shadow-sm">
-                        <option>Pilih Poli</option>
-                        <option>Poli Jantung</option>
-                        <option>Poli Anak</option>
-                        <option>Poli Mata</option>
-                        <option>Poli Saraf</option>
+                        <option value="">Pilih Poli</option>
+                        <option value="poli Jantung">Poli Jantung</option>
+                        <option value="poli Anak">Poli Anak</option>
+                        <option value="poli Mata">Poli Mata</option>
+                        <option value="poli Saraf">Poli Saraf</option>
                     </select>
 
                     <!-- No Telp -->
-                    <input type="text" placeholder="No. Telp/Handphone"
+                    <input type="text" name="no_telp" placeholder="No. Telp/Handphone"
                         class="w-full px-4 py-3 rounded-md bg-gradient-to-r from-teal-100 to-teal-50 placeholder-gray-500 outline-none shadow-sm" />
 
                     <!-- Tombol -->
-                    <div class="w-full flex justify-center pt-2">
+                    <div class="w-full flex justify-center pt-2 gap-4">
                         <button type="submit"
                             class="px-8 py-2 rounded-md bg-gradient-to-r from-teal-400 to-teal-200 font-semibold shadow hover:opacity-90">
                             Daftar
                         </button>
+                        <a href="{{ route('home') }}"
+                            class="px-8 py-2 rounded-md bg-gradient-to-r from-teal-400 to-teal-200 font-semibold shadow hover:opacity-90 text-gray-800 flex items-center justify-center">
+                            Kembali ke Home
+                        </a>
                     </div>
                 </form>
             </section>

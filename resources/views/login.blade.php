@@ -75,7 +75,24 @@
             <!-- Form -->
             <section class="w-[440px] max-w-full flex flex-col items-center">
                 <h1 class="text-3xl font-bold mb-8">Log-in</h1>
-                <form action="#" method="POST" class="w-full space-y-5">
+
+                {{-- ALERT SUCCESS --}}
+                @if (session('success'))
+                    <div
+                        class="w-full mb-4 px-4 py-2 rounded-md bg-green-100 border border-green-300 text-green-800 text-sm">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                {{-- ALERT ERROR --}}
+                @if ($errors->any())
+                    <div class="w-full mb-4 px-4 py-2 rounded-md bg-red-100 border border-red-300 text-red-800 text-sm">
+                        {{ $errors->first() }}
+                    </div>
+                @endif
+
+                <form action="{{ route('login.post') }}" method="POST" class="w-full space-y-5">
+                    @csrf
                     <!-- Nama -->
                     <label class="block">
                         <div
@@ -112,8 +129,19 @@
                         </button>
                     </div>
                 </form>
+
+                <!-- Tambahan link ke register -->
+                <div class="w-full flex justify-center mt-6">
+                    <p class="text-sm text-gray-600">
+                        Belum punya akun?
+                        <a href="/" class="text-teal-600 font-semibold hover:underline">
+                            Silahkan daftar terlebih dahulu di sini
+                        </a>
+                    </p>
+                </div>
             </section>
         </main>
     </div>
 </body>
+
 </html>

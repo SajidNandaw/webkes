@@ -17,9 +17,9 @@
                 <span class="text-lg font-bold text-teal-600">RUMAH SAKIT<br>TIRTA NEGARA</span>
             </div>
             <nav class="space-x-6 text-gray-700 font-medium">
-                <a href="/" class="hover:text-teal-600">Beranda</a>
+                <a href="/home" class="hover:text-teal-600">Beranda</a>
                 <a href="/about" class="hover:text-teal-600">Tentang</a>
-                <a href="/caridokter" class="hover:text-teal-600">Cari Dokter</a>
+                <a href="/dokter" class="hover:text-teal-600">Cari Dokter</a>
                 <a href="/konsultasi" class="hover:text-teal-600">Konsultasi</a>
                 <a href="/contact" class="hover:text-teal-600">Kontak</a>
                 <button class="ml-4">
@@ -41,18 +41,18 @@
             </h2>
 
             <!-- Konten utama -->
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-16">
                 <!-- Kiri (info darurat) -->
-                <div class="text-center md:text-left space-y-10">
+                <div class="text-center space-y-10">
                     <!-- Nomor IGD -->
                     <div>
-                        <div class="flex items-center justify-center md:justify-start space-x-3 mb-2">
+                        <div class="flex items-center justify-center space-x-3 mb-2">
                             <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center shadow">
-                                <img src="{{ asset('images/phone.png') }}" alt="Telepon" class="w-6 h-6">
+                                <img src="{{ asset('images/panggilan.jpg') }}" alt="Telepon" class="w-9 h-9">
                             </div>
                             <p class="text-2xl md:text-3xl font-bold text-black">+62 859-7253-1422</p>
                         </div>
-                        <div class="flex justify-center md:justify-start mt-2">
+                        <div class="flex justify-center mt-2">
                             <span class="px-4 py-1 bg-white rounded-full text-black font-semibold text-sm shadow">
                                 IGD 24 JAM
                             </span>
@@ -61,8 +61,8 @@
 
                     <!-- Nomor Ambulans -->
                     <div>
-                        <p class="text-2xl md:text-3xl font-bold text-black text-center md:text-left">118 / 119</p>
-                        <div class="flex justify-center md:justify-start mt-2">
+                        <p class="text-2xl md:text-3xl font-bold text-black text-center">118 / 119</p>
+                        <div class="flex justify-center mt-2">
                             <span class="px-4 py-1 bg-white text-black font-semibold text-sm rounded-full shadow">
                                 AMBULANS
                             </span>
@@ -70,15 +70,15 @@
                     </div>
 
                     <!-- Catatan -->
-                    <p class="italic text-gray-700 text-sm mt-10 max-w-md text-left">
+                    <p class="italic text-gray-700 text-sm mt-10 max-w-md text-center">
                         “Sebutkan nama pasien, lokasi, dan kondisi darurat <br>
                         secara singkat agar petugas dapat menyiapkan bantuan.”
                     </p>
                 </div>
 
-                <!-- Kanan (gambar dokter dari kamu) -->
-                <div class="relative flex justify-center md:justify-start">
-                    <img src="{{ asset('images/dokter.png') }}" alt="Dokter" class="h-80 object-contain relative z-10">
+                <!-- Gambar dokter -->
+                <div class="relative flex justify-center">
+                    <img src="{{ asset('images/d2.png') }}" alt="Dokter" class="h-80 object-contain relative z-10">
                 </div>
             </div>
         </div>

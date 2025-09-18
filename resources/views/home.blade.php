@@ -16,9 +16,9 @@
                 <span class="text-lg font-bold text-teal-600">RUMAH SAKIT<br>TIRTA NEGARA</span>
             </div>
             <nav class="space-x-6 text-gray-700 font-medium">
-                <a href="/" class="hover:text-teal-600">Beranda</a>
+                <a href="/home" class="hover:text-teal-600">Beranda</a>
                 <a href="/about" class="hover:text-teal-600">Tentang</a>
-                <a href="/caridokter" class="hover:text-teal-600">Cari Dokter</a>
+                <a href="/dokter" class="hover:text-teal-600">Cari Dokter</a>
                 <a href="/konsultasi" class="hover:text-teal-600">Konsultasi</a>
                 <a href="/contact" class="hover:text-teal-600">Kontak</a>
                 <button class="ml-4">
@@ -33,54 +33,44 @@
     </header>
 
     <section class="relative">
-        <!-- HERO IMAGE -->
-        <div class="relative">
-            <img src="{{ asset('images/hospital.jpg') }}" alt="Hospital" class="w-full h-64 md:h-96 object-cover">
+        <!-- Gambar -->
+        <img src="{{ asset('images/bg.jpg') }}" alt="Hospital" class="w-full h-64 md:h-96 object-cover z-0">
 
-            <!-- Overlay teal transparan -->
-            <div class="absolute inset-0 bg-teal-900 bg-opacity-40"></div>
-
-            <!-- Printilan dekoratif transparan -->
-            <img src="{{ asset('images/pattern.png') }}" alt="decor"
-                class="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-overlay">
-
-            <!-- Text -->
-            <div class="absolute top-1/4 left-8 md:left-16 text-white">
-                <h1 class="text-3xl md:text-4xl font-bold leading-snug drop-shadow">
-                    Mengalirkan Harapan,<br>Menyembuhkan Negeri
-                </h1>
-                <p class="mt-3 italic text-lg drop-shadow">
-                    "Kami berkomitmen melayani dengan tulus demi sehatnya negeri."
-                </p>
-            </div>
+        <!-- Overlay gradient full width: hijau -> putih transparan lembut -->
+        <div class="absolute inset-0 z-10"
+            style="background: linear-gradient(to right, #09B8AC 0%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0.6) 100%);">
         </div>
 
-        <!-- ===================== ICON MENU ===================== -->
-        <div class="bg-white shadow-lg py-6 px-6 grid grid-cols-2 md:grid-cols-6 gap-6 text-center">
-            <div>
-                <img src="{{ asset('images/icon1.png') }}" class="mx-auto h-10">
-                <p class="mt-2 font-medium">Rawat Jalan</p>
-            </div>
-            <div>
-                <img src="{{ asset('images/icon2.png') }}" class="mx-auto h-10">
-                <p class="mt-2 font-medium">Farmasi</p>
-            </div>
-            <div>
-                <img src="{{ asset('images/icon3.png') }}" class="mx-auto h-10">
-                <p class="mt-2 font-medium">Gizi</p>
-            </div>
-            <div>
-                <img src="{{ asset('images/icon4.png') }}" class="mx-auto h-10">
-                <p class="mt-2 font-medium">Fisioterapi</p>
-            </div>
-            <div>
-                <img src="{{ asset('images/icon5.png') }}" class="mx-auto h-10">
-                <p class="mt-2 font-medium">Laboratorium</p>
-            </div>
-            <div>
-                <img src="{{ asset('images/icon6.png') }}" class="mx-auto h-10">
-                <p class="mt-2 font-medium">Radiologi</p>
-            </div>
+        <!-- Dekorasi diamond kiri -->
+        <div class="absolute top-6 left-12 w-16 h-16 bg-teal-400/40 rotate-45 z-20"></div>
+
+        <!-- Dekorasi diamond kanan -->
+        <div class="absolute top-8 right-16 w-20 h-20 bg-teal-500/60 rotate-45 z-20"></div>
+
+        <!-- Segitiga kanan bawah (proporsional, lurus, cebol) -->
+        <div
+            class="absolute bottom-12 right-28 w-0 h-0
+                border-l-[70px] border-l-transparent
+                border-r-[70px] border-r-transparent
+                border-b-[90px] border-b-teal-400/60 z-20">
+        </div>
+
+        <!-- Segitiga kiri bawah (proporsional, lurus, cebol) -->
+        <div
+            class="absolute bottom-8 left-28 w-0 h-0
+                border-l-[60px] border-l-transparent
+                border-r-[60px] border-r-transparent
+                border-b-[80px] border-b-teal-400/35 z-20">
+        </div>
+
+        <!-- Text -->
+        <div class="absolute top-1/4 left-8 md:left-16 text-white z-30">
+            <h1 class="text-3xl md:text-4xl font-bold leading-snug drop-shadow">
+                Mengalirkan Harapan,<br>Menyembuhkan Negeri
+            </h1>
+            <p class="mt-3 italic text-lg drop-shadow">
+                "Kami berkomitmen melayani dengan tulus demi sehatnya negeri."
+            </p>
         </div>
     </section>
 
@@ -127,22 +117,22 @@
             <h2 class="text-center text-2xl font-bold text-gray-800 mb-10">DOKTER SPESIALIS</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                 <div class="bg-white shadow p-4 rounded-lg">
-                    <img src="{{ asset('images/dokter1.png') }}" class="mx-auto h-40 mb-4">
+                    <img src="{{ asset('images/D4.jpg') }}" class="mx-auto h-43 mb-4">
                     <p class="font-bold">dr. Ari Nurial, Sp.PD, KKV</p>
                     <p class="text-sm text-gray-600">(Dokter Spesialis Jantung)</p>
                 </div>
                 <div class="bg-white shadow p-4 rounded-lg">
-                    <img src="{{ asset('images/dokter2.png') }}" class="mx-auto h-40 mb-4">
+                    <img src="{{ asset('images/D5.jpg') }}" class="mx-auto h-43 mb-4">
                     <p class="font-bold">Dr. dr. Novi Reskiastanti, Sp.OG, Subsp.KFM</p>
                     <p class="text-sm text-gray-600">(Dokter Kandungan)</p>
                 </div>
                 <div class="bg-white shadow p-4 rounded-lg">
-                    <img src="{{ asset('images/dokter3.png') }}" class="mx-auto h-40 mb-4">
+                    <img src="{{ asset('images/D6.jpg') }}" class="mx-auto h-43 mb-4">
                     <p class="font-bold">dr. Deni Syahputra</p>
                     <p class="text-sm text-gray-600">(Dokter Umum)</p>
                 </div>
                 <div class="bg-white shadow p-4 rounded-lg">
-                    <img src="{{ asset('images/dokter4.png') }}" class="mx-auto h-40 mb-4">
+                    <img src="{{ asset('images/D7.jpg') }}" class="mx-auto h-43 mb-4">
                     <p class="font-bold">drg. Adisti Callindra</p>
                     <p class="text-sm text-gray-600">(Dokter Spesialis Gigi)</p>
                 </div>
