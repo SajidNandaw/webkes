@@ -30,7 +30,7 @@ class DokterSeeder extends Seeder
                 'nama' => 'dr. Christin Santun Sriati Lumban Tobing, M.Gizi, Sp.GK',
                 'spesialis' => 'DOKTER GIZI',
                 'jadwal' => 'Rabu 09.00 - 12.00',
-                'foto' => '.jpg',
+                'foto' => 'D15.jpeg',
             ],
             [
                 'nama' => 'Dr. dr. Novi Reskiastanti, Sp.OG, Subsp.KFM',
@@ -72,7 +72,7 @@ class DokterSeeder extends Seeder
                 'nama' => 'dr. Amelia, Sp.B',
                 'spesialis' => 'DOKTER BEDAH',
                 'jadwal' => 'Jumat 13.00 - 16.00',
-                'foto' => 'D9.jpg',
+                'foto' => 'D14.jpeg',
             ],
         ]);
     }

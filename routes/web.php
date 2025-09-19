@@ -23,9 +23,6 @@ Route::get('/login', function () {
 // Proses Login
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 
-// Logout
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
 // ==================== HOME (hanya setelah login) ====================
 Route::get('/home', function () {
     return view('home'); // pastikan ada file resources/views/home.blade.php
